@@ -1,0 +1,694 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+min-height: 100vh;
+overflow-x: hidden;
+
+```
+font-family: "Segoe UI", sans-serif;
+
+background:
+    radial-gradient(circle at 50% 25%, #4a3500 0%, #171000 38%, #030303 100%);
+
+color: white;
+```
+
+}
+
+/* =========================
+FONDO
+========================= */
+
+.estrellas {
+position: fixed;
+inset: 0;
+
+```
+background-image:
+    radial-gradient(circle, #fff8b5 1px, transparent 1px),
+    radial-gradient(circle, #ffffff 1px, transparent 1px);
+
+background-size: 75px 75px, 125px 125px;
+
+background-position: 0 0, 40px 60px;
+
+opacity: 0.35;
+
+animation: estrellas 18s linear infinite;
+
+pointer-events: none;
+```
+
+}
+
+@keyframes estrellas {
+
+```
+from {
+    transform: translateY(0);
+}
+
+to {
+    transform: translateY(80px);
+}
+```
+
+}
+
+/* =========================
+FLORES DECORATIVAS
+========================= */
+
+.flores::before,
+.flores::after {
+
+```
+content: "🌻  🌼  🌻  🌼  🌻  🌼  🌻";
+
+position: fixed;
+
+left: 0;
+
+width: 100%;
+
+text-align: center;
+
+font-size: 34px;
+
+letter-spacing: 10px;
+
+pointer-events: none;
+
+z-index: 2;
+```
+
+}
+
+.flores::before {
+
+```
+bottom: 15px;
+
+opacity: 0.9;
+```
+
+}
+
+.flores::after {
+
+```
+top: 15px;
+
+opacity: 0.3;
+
+transform: scale(0.75);
+```
+
+}
+
+/* =========================
+CONTENEDOR
+========================= */
+
+.contenedor {
+
+```
+position: relative;
+
+z-index: 5;
+
+width: 92%;
+
+max-width: 650px;
+
+min-height: 100vh;
+
+margin: auto;
+
+padding: 35px 20px 50px;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+text-align: center;
+```
+
+}
+
+/* =========================
+FLOR PRINCIPAL
+========================= */
+
+.ramo {
+
+```
+font-size: 90px;
+
+margin-bottom: 5px;
+
+filter:
+    drop-shadow(0 0 12px #ffd000)
+    drop-shadow(0 0 35px #ff9d00);
+
+animation:
+    flotar 3s ease-in-out infinite,
+    aparecer 1.5s ease;
+```
+
+}
+
+@keyframes flotar {
+
+```
+0%, 100% {
+    transform: translateY(0) rotate(-4deg);
+}
+
+50% {
+    transform: translateY(-15px) rotate(4deg);
+}
+```
+
+}
+
+@keyframes aparecer {
+
+```
+from {
+    opacity: 0;
+    transform: scale(0);
+}
+
+to {
+    opacity: 1;
+    transform: scale(1);
+}
+```
+
+}
+
+/* =========================
+EMPRESA
+========================= */
+
+.empresa {
+
+```
+color: #ffe35c;
+
+font-size: 16px;
+
+font-weight: bold;
+
+letter-spacing: 4px;
+
+margin-bottom: 10px;
+
+text-shadow:
+    0 0 10px #ffb300;
+
+animation: aparecer 1.5s ease;
+```
+
+}
+
+/* =========================
+FECHA
+========================= */
+
+.fecha {
+
+```
+color: #fff4a3;
+
+font-size: 14px;
+
+letter-spacing: 3px;
+
+margin-bottom: 8px;
+
+font-weight: bold;
+```
+
+}
+
+/* =========================
+TITULO
+========================= */
+
+h1 {
+
+```
+font-family: Georgia, serif;
+
+font-size: clamp(40px, 9vw, 65px);
+
+line-height: 1.1;
+
+color: #ffe45c;
+
+text-shadow:
+    0 0 10px #ffcc00,
+    0 0 25px #ffae00,
+    0 0 50px rgba(255, 190, 0, 0.7);
+
+margin-bottom: 12px;
+
+animation: brillo 2.5s ease-in-out infinite alternate;
+```
+
+}
+
+@keyframes brillo {
+
+```
+from {
+    text-shadow:
+        0 0 10px #ffcc00;
+}
+
+to {
+    text-shadow:
+        0 0 20px #ffe600,
+        0 0 45px #ffae00;
+}
+```
+
+}
+
+/* =========================
+SUBTITULO
+========================= */
+
+.subtitulo {
+
+```
+color: #fff8d2;
+
+font-size: 17px;
+
+margin-bottom: 20px;
+```
+
+}
+
+/* =========================
+NOMBRES
+========================= */
+
+.nombres {
+
+```
+display: flex;
+
+flex-wrap: wrap;
+
+justify-content: center;
+
+gap: 8px;
+
+max-width: 570px;
+
+margin-bottom: 22px;
+```
+
+}
+
+.nombres span {
+
+```
+padding: 7px 13px;
+
+border-radius: 30px;
+
+background:
+    rgba(255, 210, 40, 0.10);
+
+border:
+    1px solid rgba(255, 215, 70, 0.35);
+
+color: #ffe990;
+
+font-size: 14px;
+
+transition: 0.3s;
+
+animation: nombre 0.8s ease backwards;
+```
+
+}
+
+.nombres span:hover {
+
+```
+transform: translateY(-4px) scale(1.05);
+
+background:
+    rgba(255, 210, 40, 0.25);
+
+box-shadow:
+    0 0 15px rgba(255, 200, 0, 0.5);
+
+color: white;
+```
+
+}
+
+@keyframes nombre {
+
+```
+from {
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+```
+
+}
+
+/* =========================
+MENSAJE
+========================= */
+
+.mensaje {
+
+```
+width: 100%;
+
+max-width: 550px;
+
+padding: 22px;
+
+border-radius: 25px;
+
+background:
+    rgba(255, 210, 50, 0.08);
+
+border:
+    1px solid rgba(255, 220, 80, 0.25);
+
+backdrop-filter: blur(8px);
+
+box-shadow:
+    0 0 30px rgba(255, 190, 0, 0.08);
+
+color: #fff9d6;
+
+font-size: 16px;
+
+line-height: 1.6;
+```
+
+}
+
+.mensaje p {
+
+```
+margin-bottom: 12px;
+```
+
+}
+
+.mensaje p:last-child {
+
+```
+margin-bottom: 0;
+```
+
+}
+
+.destacado {
+
+```
+color: #ffe34d;
+
+font-size: 19px;
+
+font-weight: bold;
+```
+
+}
+
+/* =========================
+BOTÓN
+========================= */
+
+button {
+
+```
+margin-top: 24px;
+
+padding: 15px 32px;
+
+border: none;
+
+border-radius: 50px;
+
+background:
+    linear-gradient(
+        135deg,
+        #ffe600,
+        #ffb300
+    );
+
+color: #3b2500;
+
+font-size: 17px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+box-shadow:
+    0 0 15px rgba(255, 210, 0, 0.6);
+
+transition: 0.3s;
+
+animation: boton 2s infinite;
+
+z-index: 20;
+```
+
+}
+
+button:hover {
+
+```
+transform: scale(1.08);
+
+box-shadow:
+    0 0 30px #ffd000;
+```
+
+}
+
+@keyframes boton {
+
+```
+0%, 100% {
+    transform: scale(1);
+}
+
+50% {
+    transform: scale(1.05);
+}
+```
+
+}
+
+/* =========================
+SORPRESA
+========================= */
+
+.sorpresa {
+
+```
+display: none;
+
+width: 100%;
+
+max-width: 520px;
+
+margin-top: 25px;
+
+padding: 28px 22px;
+
+border-radius: 28px;
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(255, 220, 50, 0.20),
+        rgba(255, 160, 0, 0.08)
+    );
+
+border:
+    1px solid rgba(255, 220, 50, 0.45);
+
+box-shadow:
+    0 0 35px rgba(255, 190, 0, 0.15);
+
+animation: sorpresa 1s ease;
+```
+
+}
+
+.sorpresa.mostrar {
+
+```
+display: block;
+```
+
+}
+
+@keyframes sorpresa {
+
+```
+from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+```
+
+}
+
+.flor-sorpresa {
+
+```
+font-size: 42px;
+
+margin-bottom: 10px;
+
+filter:
+    drop-shadow(0 0 10px #ffd000);
+```
+
+}
+
+h2 {
+
+```
+color: #ffe45c;
+
+font-family: Georgia, serif;
+
+margin-bottom: 14px;
+
+text-shadow:
+    0 0 15px #ffb300;
+```
+
+}
+
+.sorpresa p {
+
+```
+color: #fff9d6;
+
+line-height: 1.6;
+
+margin-bottom: 12px;
+```
+
+}
+
+.final {
+
+```
+color: #ffe34d !important;
+
+font-weight: bold;
+```
+
+}
+
+.firma {
+
+```
+margin-top: 18px;
+
+color: #ffd83d;
+
+font-size: 21px;
+
+font-family: cursive;
+```
+
+}
+
+/* =========================
+CELULARES
+========================= */
+
+@media (max-width: 600px) {
+
+```
+.contenedor {
+
+    padding: 25px 15px 50px;
+}
+
+.ramo {
+
+    font-size: 70px;
+}
+
+.empresa {
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+h1 {
+
+    font-size: 42px;
+}
+
+.subtitulo {
+
+    font-size: 15px;
+}
+
+.mensaje {
+
+    font-size: 15px;
+
+    padding: 18px;
+}
+
+.flores::before,
+.flores::after {
+
+    font-size: 22px;
+
+    letter-spacing: 3px;
+}
+
+.nombres span {
+
+    font-size: 13px;
+
+    padding: 6px 10px;
+}
+```
+
+}
